@@ -1,0 +1,6 @@
+name = 'Тест'
+surname = 'Тест'
+address = 'Тест Тест'
+metro = 'Сокольники'
+phone = '88888888888'
+message = 'Тест'
