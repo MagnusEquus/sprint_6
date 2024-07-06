@@ -2,28 +2,27 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 import allure
+import locators
 
 
 class OrderPage:
 
-    url = 'https://qa-scooter.praktikum-services.ru/order'
-
-    name_field = [By.XPATH, "//input[@placeholder='* Имя']"]
-    surname_field = [By.XPATH, "//input[@placeholder='* Фамилия']"]
-    address_field = [By.XPATH, "//input[@placeholder='* Адрес: куда привезти заказ']"]
-    metro_field = [By.XPATH, "//input[@placeholder='* Станция метро']"]
-    phone_field = [By.XPATH, "//input[@placeholder='* Телефон: на него позвонит курьер']"]
-    next_button = [By.CLASS_NAME, "Button_Middle__1CSJM"]
-    metro_dropdown_first = [By.XPATH, "//li[@data-value='1']"]
-    date_field = [By.XPATH, "//input[@placeholder='* Когда привезти самокат']"]
-    date_second_monday = [By.XPATH, "//div[@class='react-datepicker__week'][1]/div[1]"]
-    length_field = [By.XPATH, "//div[text()='* Срок аренды']"]
-    length_option = [By.XPATH, "//div[@class='Dropdown-option' and text()='сутки']"]
-    color_checkbox_grey = [By.XPATH, "//label[@for='grey']"]
-    message_field = [By.XPATH, "//input[@placeholder='Комментарий для курьера']"]
-    order_button = [By.XPATH, "//button[text()='Заказать' and @class='Button_Button__ra12g Button_Middle__1CSJM']"]
-    order_confirm_button = [By.XPATH, "//button[text()='Да']"]
-    order_created_window = [By.XPATH, "//div[@class='Order_ModalHeader__3FDaJ']"]
+    name_field = [By.XPATH, locators.name_field_xpath]
+    surname_field = [By.XPATH, locators.surname_field_xpath]
+    address_field = [By.XPATH, locators.address_field_xpath]
+    metro_field = [By.XPATH, locators.metro_field_xpath]
+    phone_field = [By.XPATH, locators.phone_field_xpath]
+    next_button = [By.XPATH, locators.next_button_xpath]
+    metro_dropdown_first = [By.XPATH, locators.metro_dropdown_first_xpath]
+    date_field = [By.XPATH, locators.date_field_xpath]
+    date_second_monday = [By.XPATH, locators.date_second_monday_xpath]
+    length_field = [By.XPATH, locators.length_field_xpath]
+    length_option = [By.XPATH, locators.length_option_xpath]
+    color_checkbox_grey = [By.XPATH, locators.color_checkbox_grey]
+    message_field = [By.XPATH, locators.message_field_xpath]
+    order_button = [By.XPATH, locators.order_button_xpath]
+    order_confirm_button = [By.XPATH, locators.order_confirm_button_xpath]
+    order_created_window = [By.XPATH, locators.order_created_window_xpath]
 
     def __init__(self, driver):
         self.driver = driver

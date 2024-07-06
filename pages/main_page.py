@@ -2,15 +2,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 import allure
+import locators
 
 
 class MainPage:
 
-    url = 'https://qa-scooter.praktikum-services.ru/'
-
-    dropdown_list = [By.CLASS_NAME, 'accordion__heading']
-    order_button_header = [By.XPATH, ".//button[@class='Button_Button__ra12g' and text()='Заказать']"]
-    order_button_body = [By.XPATH, "//button[@class='Button_Button__ra12g Button_Middle__1CSJM']"]
+    dropdown_list = [By.CLASS_NAME, locators.dropdown_list_class]
+    order_button_header = [By.XPATH, locators.order_button_header_xpath]
+    order_button_body = [By.XPATH, locators.order_button_body_xpath]
 
     def __init__(self, driver):
         self.driver = driver
