@@ -1,0 +1,5 @@
+NAME = 'Тест'
+SURNAME = 'Тест'
+ADDRESS = 'Тест Тест'
+PHONE = '88888888888'
+MESSAGE = 'Тест'
